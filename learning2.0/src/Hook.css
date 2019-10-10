@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans&display=swap');
 
+img {
+  margin: 10px;
+  width: 40%;
+  display: inline
+}
+
 .hook {
   font-family: 'Bree Serif', serif;
-  font-size: 36px
+  text-align: left;
+  font-size: 2.25em;
 }
 
 .summary {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 /* .centered {
@@ -42,4 +50,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.leftLine {
+  text-align: left;
 }
