@@ -6,10 +6,26 @@ img {
   display: inline
 }
 
+a {
+  color: #3b80fe;
+  text-decoration-line: none
+}
+
+a:hover {
+  color: #75a5fd
+}
+
+a img {
+  width: 32px;
+  margin-left: 0%;
+  margin-right: 10%
+}
+
 .hook {
   font-family: 'Bree Serif', serif;
   text-align: left;
   font-size: 2.25em;
+  line-height: 1em;
 }
 
 .summary {
