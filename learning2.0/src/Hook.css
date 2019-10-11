@@ -54,6 +54,7 @@ a img {
   .left {
     left: 0%;
     background-color: #e8e8e8;
+    overflow: hidden;
   }
 
   .scroll.split.right {
@@ -78,6 +79,14 @@ a img {
 }
 
 @media only screen and (max-width: 599px){
+  img {
+    width: 30%;
+  }
+
+  .left {
+    height: 100vh
+  }
+
   .in {
     padding: 0px 10px 0px 10px;
     box-sizing: border-box;
@@ -91,8 +100,19 @@ a img {
     overflow: hidden;
   }
 
+  .in > .centered {
+    transform: translateY(50%);
+  }
+
+  .split.left {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px
+  }
+
   .centered {
-    text-align: center;
+    width: 50%;
+    margin: auto auto
   }
 }
 
