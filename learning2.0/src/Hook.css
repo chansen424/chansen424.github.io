@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans&display=swap');
 
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 img {
   margin: 10px;
   width: 40%;
@@ -34,38 +40,56 @@ a img {
   line-height: 1.5;
 }
 
-/* .centered {
-  text-align: center
-} */
+@media only screen and (min-width: 600px) {
+  .split {
+    height: 100%;
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
 
-.split {
-  height: 100%;
-  width: 60%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+  /* Control the left side */
+  .left {
+    left: 0%;
+    background-color: #e8e8e8;
+  }
+
+  /* Control the right side */
+  .right {
+    right: 0;
+    width: 60%;
+    background-color: orange;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  } 
 }
 
-/* Control the left side */
-.left {
-  left: -10%;
-  background-color: #e8e8e8;
-}
+@media only screen and (max-width: 599px){
+  .split {
+    padding: 0px 10px 0px 10px;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
 
-/* Control the right side */
-.right {
-  right: 0;
-  background-color: orange;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  .centered {
+    text-align: center;
+  }
 }
 
 .leftLine {

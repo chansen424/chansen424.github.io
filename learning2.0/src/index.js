@@ -21,7 +21,7 @@ const Link = ({go="https://github.com/chansen424", icon=GitHub}) => {
 
 const Summary = (props) => {
   return (
-    <div>
+    <div className="leftLine">
       <p className="summary">
         Currently developing <Experience go="https://cornelldti.org" text="CornellDTI"/>. 
         Formerly Full Stack Intern <Experience go="https://startuptree.co" text="StartupTree" />. 
@@ -56,8 +56,9 @@ const Left = (props) => {
 
 const Right = (props) => {
   return (
-    <div className="split right">
+    <div style={{backgroundColor: props.color}} className="split right">
       <div className="centered">
+        <Summary />
       </div>
     </div>
   )
@@ -67,7 +68,8 @@ const Page = (props) => {
   return (
     <div>
       <Left />
-      <Right />
+      <Right color="orange"/>
+      <Right color="#ffcc00"/>
     </div>
   )
 }
