@@ -48,7 +48,6 @@ a img {
     z-index: 1;
     top: 0;
     overflow-x: hidden;
-    padding-top: 20px;
   }
 
   /* Control the left side */
@@ -57,11 +56,16 @@ a img {
     background-color: #e8e8e8;
   }
 
-  /* Control the right side */
-  .right {
+  .scroll.split.right {
+    max-width: 60%;
+    height: 100vh;
+    overflow-y: scroll;
     right: 0;
     width: 60%;
-    background-color: orange;
+  }
+
+  .in {
+    height: 100vh
   }
 
   .centered {
@@ -74,7 +78,7 @@ a img {
 }
 
 @media only screen and (max-width: 599px){
-  .split {
+  .in {
     padding: 0px 10px 0px 10px;
     box-sizing: border-box;
     height: 100vh;

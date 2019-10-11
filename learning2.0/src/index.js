@@ -56,7 +56,7 @@ const Left = (props) => {
 
 const Right = (props) => {
   return (
-    <div style={{backgroundColor: props.color}} className="split right">
+    <div style={{backgroundColor: props.color}} className="in">
       <div className="centered">
         <Summary />
       </div>
@@ -68,8 +68,10 @@ const Page = (props) => {
   return (
     <div>
       <Left />
-      <Right color="orange"/>
-      <Right color="#ffcc00"/>
+      <div className="scroll split right">
+        <Right color="orange"/>
+        <Right color="#ffcc00"/>
+      </div>
     </div>
   )
 }
