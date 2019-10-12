@@ -38,6 +38,11 @@ a img {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   line-height: 1.5;
+  margin: 0px 5px 0px 5px
+}
+
+.leftLine {
+  text-align: left;
 }
 
 @media only screen and (min-width: 600px) {
@@ -70,12 +75,21 @@ a img {
   }
 
   .centered {
-    position: absolute;
+    position: relative;
+    width: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  } 
+  }
+
+  .leftCenter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+  }
 }
 
 @media only screen and (max-width: 599px){
@@ -101,7 +115,7 @@ a img {
   }
 
   .in > .centered {
-    transform: translateY(50%);
+    transform: translateY(150%);
   }
 
   .split.left {
@@ -114,8 +128,4 @@ a img {
     width: 50%;
     margin: auto auto
   }
-}
-
-.leftLine {
-  text-align: left;
 }

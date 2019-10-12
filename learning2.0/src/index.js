@@ -37,7 +37,7 @@ const Summary = (props) => {
 const Left = (props) => {
   return (
     <div className="split left">
-      <div className="centered">
+      <div className="leftCenter">
         <div className="leftLine">
         <img alt="Computer" src={Computer} />
         <img alt="Book" src={Book} />
@@ -69,12 +69,11 @@ const Page = (props) => {
     <div>
       <Left />
       <div className="scroll split right">
-        <Right color="orange"/>
-        <Right color="#ffcc00"/>
+        <Right color="orange" />
+        <Right color="#ffcc00" />
       </div>
     </div>
   )
 }
-
 
 ReactDOM.render(<Page />, document.getElementById('root'))
