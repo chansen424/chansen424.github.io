@@ -115,7 +115,7 @@ a img {
   }
 
   .in > .centered {
-    transform: translateY(150%);
+    transform: translateY(100%);
   }
 
   .split.left {
