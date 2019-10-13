@@ -136,7 +136,7 @@ h1 {
   .split.left {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 10px
+    padding-left: 10px;
   }
 
   .centered {

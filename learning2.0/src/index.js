@@ -79,16 +79,26 @@ const Page = (props) => {
     <div>
       <Left />
       <div className="scroll split right">
-        <Right color="#91f8ff" title="About Me" img={Bookshelf} tag="Computer Science Student at Cornell &#128187;&#127891;"
+
+        <Right color="#91f8ff" title="About Me" img={Bookshelf} 
+        tag="Computer Science Student at Cornell &#128187;&#127891;"
         summary="Hi, I'm Christopher Hansen! I am currently pursuing a career in 
-        web development, I collect books &#128218;, and I love punk rock music &#127928;!"/>
-        <Right color="#e34840" title="Design & Tech Initiative" img={DTI} tag="Creating Technology for Community Impact"
-        summary="Currently developing for Carriage, a ride scheduling &#128663; application to help disabled &#9855; students navigate campus." />
-        <Right color="#fff" title="Full Stack" img={StartupTree} tag="Fostering the University Entrepreneurship Ecosystem"
-        summary="Worked alongside designer, product manager, and other programmers to help young entrepreneurs
-        grow their businesses and themselves." />
-        <Right color="#000" tcolor="#fff" title="Current Member" img={ASCII} tag="C:\\Cornell\\Cybersecurity_Club>&#9646;"
+          web development, I collect books &#128218;, and I love punk rock music &#127928;!" />
+
+        <Right color="#e34840" title="Design & Tech Initiative" img={DTI} 
+          tag="Creating Technology for Community Impact"
+          summary="Currently developing for Carriage, a ride scheduling 
+            &#128663; application to help disabled &#9855; students navigate campus." />
+
+        <Right color="#fff" title="Full Stack" img={StartupTree} 
+        tag="Fostering the University Entrepreneurship Ecosystem"
+        summary="Worked alongside designer, product manager, and other 
+          programmers to help young entrepreneurs grow their businesses and themselves." />
+
+        <Right color="#000" tcolor="#fff" title="Current Member" img={ASCII}
+        tag="C:\\Cornell\\Cybersecurity_Club>&#9646;"
         summary="Meeting place to share knowledge about computer security and ethical hacking." />
+
       </div>
     </div>
   )
