@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import Computer from './monitor.png'
 import Book from './book.png'
@@ -13,13 +13,13 @@ import './Hook.css'
 
 const Experience = ({go="https://cornell.edu", text="Cornell"}) => {
   return (
-    <a className="expLink" href={go}>@{text}</a>
+    <a className="expLink" href={go} target="_blank" rel="noopener noreferrer">@{text}</a>
   )
 }
 
 const Link = ({go="https://github.com/chansen424", icon=GitHub}) => {
   return (
-    <a href={go}><img alt="Book" src={icon}/></a>
+    <a href={go}><img alt="Logo" src={icon}/></a>
   )
 }
 
@@ -44,9 +44,9 @@ const Left = (props) => {
     <div className="split left">
       <div className="leftCenter">
         <div className="leftLine">
-        <img alt="Computer" src={Computer} />
-        <img alt="Book" src={Book} />
-        <h1 className="hook">
+          <img alt="Computer" src={Computer} />
+          <img alt="Book" src={Book} />
+          <h1 className="hook">
             Developer
             <br />
             & Bookworm.
@@ -74,30 +74,77 @@ const Right = ({color="#fff", title="Title", img, tcolor="#000", summary, tag}) 
   )
 }
 
+class Terminal extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      prompt: String.fromCodePoint(9646)
+    }
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.blink(),
+      1000
+    )
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID)
+  }
+
+  blink() {
+    this.setState((state) => ({
+      prompt: state.prompt === "" ? String.fromCodePoint(9646) : ""
+    }))
+  }
+
+  render() {
+    const template = `C:\\Cornell\\Cybersecurity_Club>${this.state.prompt}`
+    return (
+      <Right color="#000" tcolor="#fff" title="Current Member" img={ASCII}
+      tag={template}
+      summary="Meeting place to share knowledge about computer security and ethical hacking." />
+    )
+  }
+}
+
+const panels = [
+  {
+    color: "#91f8ff",
+    title: "About Me",
+    img: Bookshelf,
+    tag: `Computer Science Student at Cornell ${String.fromCodePoint(128187)}${String.fromCodePoint(127891)}`,
+    summary: `Hi, I'm Christopher Hansen! I am currently pursuing a career in web development, I collect books ${String.fromCodePoint(128218)}, and I love punk rock music ${String.fromCodePoint(127928)}!`
+  },
+  {
+    color:"#e34840",
+    title: "Design & Tech Initiative",
+    img: DTI,
+    tag: "Creating Technology for Community Impact",
+    summary: `Currently developing for Carriage, a ride scheduling ${String.fromCodePoint(128663)} application to help disabled ${String.fromCodePoint(9855)} students navigate campus.`
+  },
+  {
+    color: "#fff",
+    title: "Full Stack",
+    img: StartupTree,
+    tag: "Fostering the University Entrepreneurship Ecosystem",
+    summary: `Worked alongside designer, product manager, and other programmers to help young entrepreneurs grow their businesses and themselves.`
+  }
+]
+
 const Page = (props) => {
   return (
     <div>
       <Left />
       <div className="scroll split right">
 
-        <Right color="#91f8ff" title="About Me" img={Bookshelf} 
-        tag="Computer Science Student at Cornell &#128187;&#127891;"
-        summary="Hi, I'm Christopher Hansen! I am currently pursuing a career in 
-          web development, I collect books &#128218;, and I love punk rock music &#127928;!" />
+        {panels.map((elem) => 
+          <Right color={elem.color} title={elem.title} img={elem.img}
+            tag={elem.tag} summary={elem.summary} />
+        )}
 
-        <Right color="#e34840" title="Design & Tech Initiative" img={DTI} 
-          tag="Creating Technology for Community Impact"
-          summary="Currently developing for Carriage, a ride scheduling 
-            &#128663; application to help disabled &#9855; students navigate campus." />
-
-        <Right color="#fff" title="Full Stack" img={StartupTree} 
-        tag="Fostering the University Entrepreneurship Ecosystem"
-        summary="Worked alongside designer, product manager, and other 
-          programmers to help young entrepreneurs grow their businesses and themselves." />
-
-        <Right color="#000" tcolor="#fff" title="Current Member" img={ASCII}
-        tag="C:\\Cornell\\Cybersecurity_Club>&#9646;"
-        summary="Meeting place to share knowledge about computer security and ethical hacking." />
+        <Terminal />
 
       </div>
     </div>
