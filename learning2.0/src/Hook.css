@@ -7,7 +7,7 @@
 }
 
 img {
-  margin: 10px;
+  margin: 0.5em;
   width: 40%;
   display: inline
 }
@@ -27,18 +27,31 @@ a img {
   margin-right: 10%
 }
 
+.showcase {
+  width: 70%
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Bree Serif', serif;
+  font-size: 2.25em;
+  line-height: 1em;
+  text-align: left;
+}
+
 .hook {
   font-family: 'Bree Serif', serif;
   text-align: left;
   font-size: 2.25em;
   line-height: 1em;
+  margin-bottom: 0.5em
 }
 
 .summary {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   line-height: 1.5;
-  margin: 0px 5px 0px 5px
+  margin: 0px 5px 0px 0px
 }
 
 .leftLine {
@@ -58,7 +71,8 @@ a img {
   /* Control the left side */
   .left {
     left: 0%;
-    background-color: #e8e8e8;
+    /* background-color: #e8e8e8; */
+    background-color: #fffb91;
     overflow: hidden;
   }
 
@@ -98,7 +112,8 @@ a img {
   }
 
   .left {
-    height: 100vh
+    height: 100vh;
+    background-color: #fffb91;
   }
 
   .in {
@@ -115,7 +130,7 @@ a img {
   }
 
   .in > .centered {
-    transform: translateY(100%);
+    transform: translateY(20%);
   }
 
   .split.left {
