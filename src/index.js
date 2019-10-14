@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {HashRouter} from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import Computer from './monitor.png'
 import Book from './book.png'
@@ -151,4 +152,4 @@ const Page = (props) => {
   )
 }
 
-ReactDOM.render(<Page />, document.getElementById('root'))
+ReactDOM.render(<HashRouter basename="/"><Page /></HashRouter>, document.getElementById('root'))
