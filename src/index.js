@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import Computer from './monitor.png'
 import Book from './book.png'
 import LinkedIn from './linkedin.png'
@@ -151,4 +152,4 @@ const Page = (props) => {
   )
 }
 
-ReactDOM.render(<Page />, document.getElementById('root'))
+ReactDOM.render(<BrowserRouter basename={window.location.pathname || ''}><Route exact path="/" component={Page} /></BrowserRouter>, document.getElementById('root'))
