@@ -130,17 +130,18 @@ h1 {
   }
 
   .in > .centered {
-    transform: translateY(20%);
+    transform: translateY(100%);
   }
 
   .split.left {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .centered {
-    width: 50%;
+    width: 70%;
     margin: auto auto
   }
 }

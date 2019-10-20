@@ -141,7 +141,7 @@ const Page = (props) => {
       <div className="scroll split right">
 
         {panels.map((elem) => 
-          <Right color={elem.color} title={elem.title} img={elem.img}
+          <Right key={elem.title} color={elem.color} title={elem.title} img={elem.img}
             tag={elem.tag} summary={elem.summary} />
         )}
 
